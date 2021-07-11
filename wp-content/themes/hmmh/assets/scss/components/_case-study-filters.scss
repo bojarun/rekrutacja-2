@@ -1,0 +1,26 @@
+.case-study-filters{
+  display: flex;
+  position: relative;
+  margin: 50px 15px;
+  overflow-x: auto;
+
+  &__wrapper{
+    min-width: 690px;
+  }
+  &__button{
+    position: relative;
+    height: 27px;
+    padding: 0 20px;
+    margin: 0 18px;
+    @include font(700, 16px, 27px);
+    font-family: $font-primary;
+    color: $color-primary;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    &--active{
+      background: $color-secondary;
+    }
+  }
+}

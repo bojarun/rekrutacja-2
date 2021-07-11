@@ -1,0 +1,25 @@
+@mixin clearfix{
+    &:after {
+        display: table;
+        clear: both;
+        content: '';
+    }
+}
+
+@mixin font($font-weight, $font-size, $line-height:normal){
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+@mixin column($gutter-size){
+    .row{
+        margin: 0 (-$gutter-size);
+    }
+    @for $i from 1 through $columns-number {
+        .col-#{$i} {
+            width: calc(100%/#{$columns-number}*#{$i});
+            padding: 0 $gutter-size;
+        }
+    }
+}

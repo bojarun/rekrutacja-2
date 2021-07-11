@@ -1,0 +1,6 @@
+body{
+    @include font($font-weight, $font-size, $line-height);
+    font-family: $font-primary;
+    color: $color-primary;
+    background: white;
+}
